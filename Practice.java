@@ -1,27 +1,32 @@
 public class Practice {
     
+    
     public static void main(String[] args){
-        printDayOfTheWeek(5);
+        System.out.println(getLargestPrime(21));
     }
-    public static void printDayOfTheWeek(int day){
-        switch(day){
-            case 0: System.out.println("Sunday");
-                break;
-            case 1: System.out.println("Monday");
-                break;
-            case 2: System.out.println("Tuesday");
-                break;
-            case 3: System.out.println("Wednesday");
-                break;
-            case 4: System.out.println("Thursday");
-                break;
-            case 5: System.out.println("Friday");
-                break;
-            case 6: System.out.println("Saturday");
-                break;
-            default:
-                System.out.println("Invalid day");
-                break;
+        public static int getLargestPrime(int number){
+            
+            if(number < 0) return -1;
+            
+            int largest = 0;
+            for(int i=2; i<=number; i++){
+
+                if(number == 2) largest = number;
+
+                if((number % i) == 0){  //first filter factors of the number
+                    
+                    for(int j=2; j < i; j++){ //loop through factor of number
+                        
+                        if(i % j == 0){ //check if factor is not a prime number
+                            return -1;
+                        }else{
+                            //if(i==number) break;
+                            largest = i;
+                        }
+                    }
+                }
+            }
+            return largest;
         }
-    }
+
 }
