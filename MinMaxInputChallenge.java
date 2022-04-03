@@ -5,8 +5,11 @@ public class MinMaxInputChallenge {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        int big = 0, small = 0;
-        boolean first = true;
+        //int big = -2147483648;      //can set the max number to the lowest it can hold
+        //int small = 2147483647;     //can set the min number to the highest it can hold
+        //boolean first = true;
+        int big = Integer.MIN_VALUE;        //Can also use min and max constants
+        int small = Integer.MAX_VALUE;
         
         while(true){
             
@@ -15,17 +18,15 @@ public class MinMaxInputChallenge {
             
             if(isAnInt){
                 int number = scanner.nextInt();
-                if(first){
+               /* if(first){
                     first = false;
                     small = number;
                     big = number;
-                }
+                }*/
                 if(number < small)
                     small = number;
-                else if(number > big){
+                if(number > big){
                     big = number;
-                }else{
-                    continue;
                 }
                 
             }else{
