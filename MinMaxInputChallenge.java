@@ -6,13 +6,20 @@ public class MinMaxInputChallenge {
         Scanner scanner = new Scanner(System.in);
 
         int big = 0, small = 0;
+        boolean first = true;
         
         while(true){
             
             System.out.println("Enter number:");
             boolean isAnInt = scanner.hasNextInt();
+            
             if(isAnInt){
                 int number = scanner.nextInt();
+                if(first){
+                    first = false;
+                    small = number;
+                    big = number;
+                }
                 if(number < small)
                     small = number;
                 else if(number > big){
