@@ -19,7 +19,7 @@ public class SimpleCalculator{
     public double getAdditionResult(){
         return this.getFirstNumber() + this.getSecondNumber();
     }
-    public double getSubractionResult(){
+    public double getSubtractionResult(){
         return this.getFirstNumber() - this.getSecondNumber();
     }
     public double getMultiplicationResult(){
