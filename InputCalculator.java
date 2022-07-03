@@ -12,23 +12,24 @@ public class InputCalculator {
         
         Scanner scanner = new Scanner(System.in);
         
-        long sum = 0;
+        int sum = 0, number = 0;
+        
+        long avg = 0;
         int counter = 0;
-        while(true){
-            System.out.println("enter a number: ");
-            boolean isAnInt = scanner.hasNextInt();
-             
-            if(isAnInt){
-                int number = scanner.nextInt();
-                sum += (long)number;
-                counter++;
-            }else{
-                
-                break;
-            }
+        boolean isAnInt = scanner.hasNextInt();
+        while(isAnInt){
+            
+            number = scanner.nextInt();
+            sum += number;
+            counter = counter + 1;
+            
+            isAnInt = scanner.hasNextInt();
         }
-        long avg = sum/counter;
+        if(counter > 0)
+            avg = (long) Math.round((double)sum/(double)counter);   //you can also use Math.ceil()
+
         System.out.println("SUM = " + sum + " AVG = "+ avg);
+        
         scanner.close();
     }
 }
