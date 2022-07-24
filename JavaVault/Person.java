@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class Person {
     // write your code here
     private String firstName;

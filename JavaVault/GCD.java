@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class GCD{
     // write your code here
 

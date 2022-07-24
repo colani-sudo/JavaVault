@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class NumberToWords {
     // write your code here
 

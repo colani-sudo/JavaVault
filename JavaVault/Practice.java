@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class Practice {
     
     

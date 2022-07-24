@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class EvenDigitSum {
     // write your code here
     public static int getEvenDigitSum(int number){

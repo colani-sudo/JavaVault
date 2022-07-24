@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class SharedDigit {
     // write your code here
     

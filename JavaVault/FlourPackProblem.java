@@ -1,3 +1,5 @@
+package JavaVault;
+
 public class FlourPackProblem {
     
     public static void main(String[] args){
